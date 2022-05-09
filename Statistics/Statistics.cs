@@ -6,7 +6,7 @@ namespace Statistics.Test
             public class StatsComputer
             {
                         public double sum = 0.0,average=0.0, min=0.0, max=0.0;
-                        public object CalculateStatistics(List<float> numbers)
+                        public object CalculateStatistics(List<double> numbers)
                         {
                         //Implement statistics here
                            
