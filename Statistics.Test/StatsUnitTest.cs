@@ -12,7 +12,7 @@ namespace Statistics.Test
         {
             var statsComputer = new StatsComputer();
             var computedStats = statsComputer.CalculateStatistics(
-                new List<double> { 1.5, 8.9, 3.2, 4.5});
+                new List<float> { 1.5, 8.9, 3.2, 4.5});
             float epsilon = 0.001F;
             
             Assert.True(Math.Abs(statsComputer.average - 4.525) <= epsilon);
@@ -28,7 +28,7 @@ namespace Statistics.Test
         {
             var statsComputer = new StatsComputer();
            var computedStats = statsComputer.CalculateStatistics(
-                new List<double>());
+                new List<float>());
                 
             //All fields of computedStats (average, max, min) must be
             //Double.NaN (not-a-number), as described in
