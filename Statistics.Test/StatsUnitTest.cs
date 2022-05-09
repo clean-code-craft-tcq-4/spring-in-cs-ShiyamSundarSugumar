@@ -10,8 +10,8 @@ namespace Statistics.Test
         public void ReportsAverageMinMax()
         {
             var statsComputer = new StatsComputer();
-            var computedStats = statsComputer.CalculateStatistics( new List<double> {1.5, 8.9, 3.2, 4.5} );
-                
+            var computedStats = statsComputer.CalculateStatistics(
+                new List<double> { 1.0, 2.0, 3.0 });
             float epsilon = 0.001F;
             
             Assert.True(Math.Abs(statsComputer.average - 4.525) <= epsilon);
@@ -26,7 +26,8 @@ namespace Statistics.Test
         public void ReportsNaNForEmptyInput()
         {
             var statsComputer = new StatsComputer();
-            var computedStats = statsComputer.CalculateStatistics( new List<double> {1.5, 8.9, 3.2, 4.5} );
+           var computedStats = statsComputer.CalculateStatistics(
+                new List<double> { 1.0, 2.0, 3.0 });
                 
             //All fields of computedStats (average, max, min) must be
             //Double.NaN (not-a-number), as described in
