@@ -28,7 +28,7 @@ namespace Statistics.Test
         {
             var statsComputer = new StatsComputer();
            var computedStats = statsComputer.CalculateStatistics(
-                new List<double> { 1.0, 2.0, 3.0 });
+                new List<double>());
                 
             //All fields of computedStats (average, max, min) must be
             //Double.NaN (not-a-number), as described in
