@@ -33,7 +33,7 @@ namespace Statistics.Test
             
             
             Assert.True(Double.NaN.Equals(statsComputer.average));
-            //Assert.True(Double.NaN.Equals(statsComputer.min));
+            Assert.True(Double.NaN.Equals(statsComputer.min));
             Assert.True(Double.NaN.Equals(statsComputer.max));
         }
         [Fact]
