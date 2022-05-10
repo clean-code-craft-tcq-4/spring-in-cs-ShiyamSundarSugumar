@@ -34,9 +34,9 @@ namespace Statistics.Test
             //https://docs.microsoft.com/en-us/dotnet/api/system.double.nan?view=netcore-3.1
             
             
-            Assert.True(Double.NaN.Equals(statsComputer.average))
-            Assert.True(Double.NaN.Equal(statsComputer.min))
-            Assert.True(Double.NaN.Equal(statsComputer.max))
+            Assert.True(Double.NaN.Equals(statsComputer.average));
+            Assert.True(Double.NaN.Equal(statsComputer.min));
+            Assert.True(Double.NaN.Equal(statsComputer.max));
         }
         [Fact]
         public void RaisesAlertsIfMaxIsMoreThanThreshold()
