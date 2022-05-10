@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq
 
 namespace Statistics.Test
 {
@@ -48,6 +49,60 @@ namespace Statistics.Test
                         }
                 
             }
+public class StatsAlerter
+
+    {
+        private IAlerter[] alerters;
+        private float maxthreshold;
+
+        public StatsAlerter(float maxthreshold,IAlerter[] alerters)
+        {
+            this.alerters = alerters;
+            this.maxthreshold = maxthreshold;
+        }
+
+        public void checkAndAlert(List <float> values)
+        {
+            if(values.Max()>maxthreshold)
+            {
+                alerters[0].AlertSet();
+                alerters[1].AlertSet();
+
+            }
+        }
+
+    }
+
+
+    public interface IAlerter
+    {
+         void AlertSet();
+    }
+
+
+    public class EmailAlert : IAlerter
+    {
+        public bool emailSent;
+
+        public void AlertSet()
+        {
+            emailSent = true;
+        }
+    }
+
+
+    public class LEDAlert : IAlerter
+    {
+        public bool ledGlows;
+        
+        public void AlertSet()
+        {
+            ledGlows = true;
+        }
+    }
+            
+            
+            
     
 }
                 
