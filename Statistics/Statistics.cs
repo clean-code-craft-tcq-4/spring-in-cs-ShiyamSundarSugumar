@@ -12,7 +12,7 @@ namespace Statistics.Test
                         //Implement statistics here
                            
                             // If Empty list arrived
-                           if (numbers == null )
+                           if (numbers.Count == 0)
                            {
                                        
                                        min = Double.NaN;
