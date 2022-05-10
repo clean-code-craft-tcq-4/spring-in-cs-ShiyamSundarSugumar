@@ -16,7 +16,7 @@ namespace Statistics.Test
                            {
                                        average =Double.NaN;
                                        min = Double.NaN;
-                                       max = double.NaN;
+                                       max = Double.NaN;
                            }
                            else
                            {
