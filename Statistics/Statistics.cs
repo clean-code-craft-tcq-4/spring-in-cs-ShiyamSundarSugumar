@@ -13,7 +13,7 @@ namespace Statistics.Test
                             // If Empty list arrived
                            if (numbers == null )
                            {
-                                       sum = average = min = max = Double.Nan
+                                       sum = average = min = max = Double.Nan;
                            }
                            else
                            {
