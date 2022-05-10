@@ -42,8 +42,9 @@ namespace Statistics.Test
 
 
                             average = sum / numbers.Count;
-                            return numbers;
+                            
                            }
+                           return numbers;
                         }
                 
             }
