@@ -53,15 +53,15 @@ public class StatsAlerter
 
     {
         private IAlerter[] alerters;
-        private float maxthreshold;
+        private double maxthreshold;
 
-        public StatsAlerter(float maxthreshold,IAlerter[] alerters)
+        public StatsAlerter(float max_thres,IAlerter[] alerter)
         {
-            this.alerters = alerters;
-            this.maxthreshold = maxthreshold;
+            alerters = alerter;
+            maxthreshold = (double)max_thres;
         }
 
-        public void checkAndAlert(List <float> values)
+        public void checkAndAlert(List <double> values)
         {
             if(values.Max()>maxthreshold)
             {
