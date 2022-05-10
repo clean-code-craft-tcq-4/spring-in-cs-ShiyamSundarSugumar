@@ -14,9 +14,11 @@ namespace Statistics.Test
                             // If Empty list arrived
                            if (numbers == null )
                            {
-                                       average =Double.NaN;
+                                       
                                        min = Double.NaN;
                                        max = Double.NaN;
+                                       average = Double.NaN;
+                                       return numbers;
                            }
                            else
                            {
@@ -45,9 +47,10 @@ namespace Statistics.Test
 
 
                             average = sum / numbers.Count;
+                            return numbers;
                             
                            }
-                           return numbers;
+                           
                         }
                 
             }
